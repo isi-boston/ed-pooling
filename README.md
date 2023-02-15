@@ -64,7 +64,7 @@ The files containing the IDF scores which were used in this work are provided un
 
 
 ## Training
-Training on the English ACE dataset.
+We provide complete guidelines on how to train on the English ACE dataset.
 
 
 For `strategy=first_token/last_token/average`:
@@ -111,6 +111,11 @@ $ bash scripts/train_triggers.sh \
     ${IDF_DEFAULT_SCORE} \
     ${IDF_SCORES_FILE}
 ```
+
+Training on other datasets (BETTER/MINION) follow similar commands.
+Valid tasks when training on English are `TASK=en-ace/en-minion/phase1/phase2/abstract` 
+If one wants to train a model on data other than English, then valid tasks are 
+`TASK=ar-ace/{es,hi,ko,pl,pt,tr}-minion`.
 
 ## Prediction
 Using the models trained on English ACE, we can now make predictions on English/Arabic ACE test sets.
@@ -181,6 +186,17 @@ $ python run_token_classification.py \
     --token_scores_temperature ${IDF_TEMPERATURE} \
     --default_token_score ${IDF_DEFAULT_SCORE} \
     --token_scores_file ${IDF_SCORES_FILE}
+```
+
+If training/predicting on task other than ACE, we would need to change the TASK/TASK_TYPE accordingly. 
+Mapping of TASK to TASK_TYPE follows:
+```
+{
+    {en,ar}-ace: AceTrigger,
+    {phase1,phase2}: BetterBasicTrigger,
+    {abstract}: BetterAbstractTrigger,
+    {en,es,hi,ko,pl,pt,tr}-minion: TriggerClassificationMinionTask
+}
 ```
 
 ## Score

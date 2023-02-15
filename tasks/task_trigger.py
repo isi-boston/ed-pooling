@@ -419,12 +419,3 @@ class MinionTriggerBetterFormat(TriggerClassificationTask):
 
     def add_event_to_sentence(self, sentence: BetterSentence, event: BetterEvent) -> None:
         sentence.basic_events.append(event)
-
-
-if __name__ == "__main__":
-    task_ = BetterBasicTriggerP2Only()
-    examples_ = task_.read_examples_from_file(
-       "../c_1127260902.augment.zh.json",
-        augment=False
-    )
-    print(examples_[0].words, examples_[0].labels)
