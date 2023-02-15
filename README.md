@@ -64,7 +64,7 @@ The files containing the IDF scores which were used in this work are provided un
 
 
 ## Training
-We give an example on how to train an `xlm-roberta-large` model on the ACE english data.
+Training on the English ACE dataset.
 
 
 For `strategy=first_token/last_token/average`:
