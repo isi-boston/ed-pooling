@@ -218,4 +218,15 @@ $ python scripts/score_triggers.py \
 
 ## How to Cite
 ```bibtex
+@misc{https://doi.org/10.48550/arxiv.2302.11365,
+  doi = {10.48550/ARXIV.2302.11365},
+  url = {https://arxiv.org/abs/2302.11365},
+  author = {Agarwal, Shantanu and Fincke, Steven and Jenkins, Chris and Miller, Scott and Boschee, Elizabeth},
+  keywords = {Computation and Language (cs.CL), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Impact of Subword Pooling Strategy on Cross-lingual Event Detection},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+
 ```
