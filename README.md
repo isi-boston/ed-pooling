@@ -17,7 +17,7 @@ This repository contains the code to reproduce the results presented in
 
 ## Setup
 ```bash
-$ conda create -f environment.yml
+$ conda env create -f environment.yml
 $ conda activate ed-pooling
 ```
 
